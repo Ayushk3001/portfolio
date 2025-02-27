@@ -16,12 +16,12 @@ build:
     - npm run build
   artifacts:
     paths:
-      - build/
+      - dist/
 
 deploy:
   stage: deploy
   script:
-    - mv build public
+    - mv dist public
   artifacts:
     paths:
       - public
@@ -30,7 +30,7 @@ deploy:
 
 pages:
   script:
-    - mv build public
+    - mv dist public
   artifacts:
     paths:
       - public
